@@ -2,6 +2,8 @@
 
 OH telemetry collector load test was developed for testing the application workload in order to make a comparison between the POC in Java and the one in Rust.
 
+[Here](https://openhospital.atlassian.net/browse/OP-952) is the Jira ticket.
+
 The application for load test comparison are the following:
 
 - [oh_telemetry_collector_server_rust](https://github.com/goto-eof/oh_telemetry_collector_server_rust)
