@@ -22,17 +22,17 @@ npm install
 #### Run artillery for rust API and generate report
 
 ```bash
-artillery run  --output report_rust.json  load_test_rust.yml && artillery report --output report_rust.html report_rust.json
+npm run rust
 ```
 
 #### Run artillery for java API and generate report
 
 ```bash
-artillery run  --output report_java.json  load_test_java.yml && artillery report --output report_java.html report_java.json
+npm run java
 ```
 
 #### Run artillery for both, rust and java projects, and generate reports
 
 ```bash
-artillery run  --output report_rust.json  load_test_rust.yml && artillery report --output report_rust.html report_rust.json && artillery run  --output report_java.json  load_test_java.yml && artillery report --output report_java.html report_java.json
+npm run java && npm run rust
 ```
