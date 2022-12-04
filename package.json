@@ -1,0 +1,14 @@
+{
+  "name": "oh_telemetry_collector_load_testing",
+  "version": "1.0.0",
+  "description": "load test for OH Telemetry Collector Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrei Dodu",
+  "license": "ISC",
+  "devDependencies": {
+    "artillery": "^2.0.0-27"
+  }
+}

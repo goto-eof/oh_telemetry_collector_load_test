@@ -1,0 +1,25 @@
+config:
+  target: "http://localhost:8015"
+  phases:
+    - duration: 300
+      arrivalRate: 73
+ 
+scenarios:
+  - name: "Store data"
+    flow:
+    - post:
+        url: "/telemetry"
+        json:
+          data:
+            - code: FUN_HW
+              key: hw_cpu_number_physical
+              value: '8'
+            - code: FUN_HW
+              key: hw_cpu_number_logical
+              value: '16'
+            - code: FUN_HW
+              key: hw_ram_capacity
+              value: '32'
+            - code: FUN_HW
+              key: hw_screen_size
+              value:
