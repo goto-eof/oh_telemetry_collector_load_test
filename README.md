@@ -7,6 +7,8 @@ The applciations for load test comparison are the following:
 - [oh_telemetry_collector_server_rust](https://github.com/goto-eof/oh_telemetry_collector_server_rust)
 - [oh_telemetry_collector_server_java](https://github.com/goto-eof/oh_telemetry_collector_server_java)
 
+(Remember first to run both docker containers: the POC developed in Rust and the one developed in Java)
+
 The test result is under the reports directory. 
 
 A meangfull value is the P95 percentile. It means that 95% of all our request had a response time equal or less than the value in the report.
