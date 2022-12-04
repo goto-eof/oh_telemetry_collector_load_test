@@ -19,19 +19,19 @@ A meangfull value is the P95 percentile. It means that 95% of all our request ha
 npm install
 ```
 
-#### Run artillery for rust API
+#### Run artillery for rust API and generate report
 
 ```bash
 artillery run  --output report_rust.json  load_test_rust.yml && artillery report --output report_rust.html report_rust.json
 ```
 
-#### Run artillery for java API
+#### Run artillery for java API and generate report
 
 ```bash
 artillery run  --output report_java.json  load_test_java.yml && artillery report --output report_java.html report_java.json
 ```
 
-#### Run artillery for both, rust and java projects
+#### Run artillery for both, rust and java projects, and generate reports
 
 ```bash
 artillery run  --output report_rust.json  load_test_rust.yml && artillery report --output report_rust.html report_rust.json && artillery run  --output report_java.json  load_test_java.yml && artillery report --output report_java.html report_java.json
