@@ -1,11 +1,15 @@
 ### Run artillery and make report
 
-OH telemetry collector load test was developed for testing the application workload in order to allow to make a comparison between the POC in Java and the one in rust.
+OH telemetry collector load test was developed for testing the application workload in order to make a comparison between the POC in Java and the one in Rust.
 
 The applciations for load test comparison are the following:
 
 - [oh_telemetry_collector_server_rust](https://github.com/goto-eof/oh_telemetry_collector_server_rust)
 - [oh_telemetry_collector_server_java](https://github.com/goto-eof/oh_telemetry_collector_server_java)
+
+The test result is under the reports directory. 
+
+A meangfull value is the P95 percentile. It means that 95% of all our request had a response time equal or less than the value in the report.
 
 #### Install packages
 
