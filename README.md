@@ -2,7 +2,7 @@
 
 OH telemetry collector load test was developed for testing the application workload in order to make a comparison between the POC in Java and the one in Rust.
 
-The applciations for load test comparison are the following:
+The application for load test comparison are the following:
 
 - [oh_telemetry_collector_server_rust](https://github.com/goto-eof/oh_telemetry_collector_server_rust)
 - [oh_telemetry_collector_server_java](https://github.com/goto-eof/oh_telemetry_collector_server_java)
