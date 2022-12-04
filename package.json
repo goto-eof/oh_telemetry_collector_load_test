@@ -4,8 +4,8 @@
   "description": "load test for OH Telemetry Collector Server",
   "main": "index.js",
   "scripts": {
-    "rust": "artillery run  --output report_rust.json  load_test_rust.yml && artillery report --output report_rust.html report_rust.json",
-    "java": "artillery run  --output report_java.json  load_test_java.yml && artillery report --output report_java.html report_java.json"
+    "rust": "artillery run  --output reports/report_rust.json  load_test_rust.yml && artillery report --output reports/report_rust.html reports/report_rust.json",
+    "java": "artillery run  --output reports/report_java.json  load_test_java.yml && artillery report --output reports/report_java.html reports/report_java.json"
   },
   "author": "Andrei Dodu",
   "license": "ISC",
