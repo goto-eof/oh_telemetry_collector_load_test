@@ -1,4 +1,4 @@
-### Run artillery and make report
+### OH Telemetry Collector load test
 
 OH telemetry collector load test was developed for testing the application workload in order to make a comparison between the POC in Java and the one in Rust.
 
