@@ -31,7 +31,7 @@ npm run rust
 npm run java
 ```
 
-#### Run artillery for both, rust and java projects, and generate reports
+#### Run artillery (sequentially) for both, rust and java projects, and generate reports
 
 ```bash
 npm run java && npm run rust
