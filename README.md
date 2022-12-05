@@ -9,6 +9,8 @@ The application for load test comparison are the following:
 - [oh_telemetry_collector_server_rust](https://github.com/goto-eof/oh_telemetry_collector_server_rust)
 - [oh_telemetry_collector_server_java](https://github.com/goto-eof/oh_telemetry_collector_server_java)
 
+Currently the results of two servers are not comparable, because the applciation in Rust moved on. But it is possible to view the old results in the `reports` directory.
+
 (Remember first to run both docker containers: the POC developed in Rust and the one developed in Java)
 
 The test result is under the reports directory. 
