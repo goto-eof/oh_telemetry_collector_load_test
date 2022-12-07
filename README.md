@@ -1,4 +1,4 @@
-### Run artillery and make report
+### OH Telemetry Collector load test
 
 OH telemetry collector load test was developed for testing the applications workload. So that we can make a comparison between the POC in Java, Rust and TypeScript.
 
@@ -38,7 +38,7 @@ npm run java
 npm run typescript
 ```
 
-#### Run artillery for both, rust and java projects, and generate reports
+#### Run artillery (sequentially) for all of them and generate reports
 
 ```bash
 npm run java && npm run rust && npm run typescript
