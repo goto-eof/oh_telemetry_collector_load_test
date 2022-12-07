@@ -4,10 +4,10 @@
   "description": "load test for OH Telemetry Collector Server",
   "main": "index.js",
   "scripts": {
-    "all":"npm run rust && npm run java && npm run typescript",
+    "all":"npm run rust && npm run java && npm run js",
     "rust": "artillery run  --output reports/report_rust.json  load_test_rust.yml && artillery report --output reports/report_rust.html reports/report_rust.json",
     "java": "artillery run  --output reports/report_java.json  load_test_java.yml && artillery report --output reports/report_java.html reports/report_java.json",
-    "typescript": "artillery run  --output reports/report_typescript.json  load_test_typescript.yml && artillery report --output reports/report_typescript.html reports/report_typescript.json"
+    "js": "artillery run  --output reports/report_js.json  load_test_js.yml && artillery report --output reports/report_js.html reports/report_js.json"
   },
   "author": "Andrei Dodu",
   "license": "ISC",

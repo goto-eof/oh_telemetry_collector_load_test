@@ -36,13 +36,13 @@ npm run java
 #### Run artillery for typescript API and generate report
 
 ```bash
-npm run typescript
+npm run js
 ```
 
 #### Run artillery (sequentially) for all of them and generate reports
 
 ```bash
-npm run java && npm run rust && npm run typescript
+npm run java && npm run rust && npm run js
 ```
 
 or 
@@ -50,3 +50,6 @@ or
 ```bash
 npm run all
 ```
+
+
+P.S. If you have a mac and the java load test does not work, it could be that the Dockers VM has not enought space for the application container, so that change settings of VM. 

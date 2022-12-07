@@ -1,15 +1,29 @@
 config:
-  target: "http://localhost:8017"
+  target: "http://127.0.0.1:8017"
+  plugins:
+      # expect: {}  
   phases:
     - duration: 300
       arrivalRate: 10
-      maxVusers: 50
+      maxVusers: 100
  
 scenarios:
   - name: "Rust | Storing data"
     flow:
     - post:
         url: "/collect"
+        capture:
+            - json: "$.status"
+              as: status
+        expect:
+          - statusCode: 
+            - 200
+            - 201
+          - contentType: json
+          - hasProperty: status
+          - equals:
+              - "true"
+              - "{{ status }}"     
         json:
           FUN_HW:
             hw_mem_total_memory: 1 GiB
