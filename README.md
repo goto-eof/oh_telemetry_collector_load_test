@@ -14,6 +14,7 @@ The test result is under the reports directory.
 
 A meangfull value is the P95 percentile. It means that 95% of all our request had a response time equal or less than the value in the report. So that less is better.
 
+
 #### Install packages
 
 ```bash
