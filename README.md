@@ -1,13 +1,14 @@
 ### Run artillery and make report
 
-OH telemetry collector load test was developed for testing the application workload in order to make a comparison between the POC in Java and the one in Rust.
+OH telemetry collector load test was developed for testing the applications workload. So that we can make a comparison between the POC in Java, Rust and TypeScript.
 
-The applciations for load test comparison are the following:
+The applications are the following:
 
 - [oh_telemetry_collector_server_rust](https://github.com/goto-eof/oh_telemetry_collector_server_rust)
 - [oh_telemetry_collector_server_java](https://github.com/goto-eof/oh_telemetry_collector_server_java)
+- [oh_telemetry_collector_server_ts](https://github.com/goto-eof/oh_telemetry_collector_server_ts)
 
-(Remember first to run both docker containers: the POC developed in Rust and the one developed in Java)
+(Remember first to run all three docker containers: docker-compose up)
 
 The test result is under the reports directory. 
 
@@ -31,8 +32,20 @@ npm run rust
 npm run java
 ```
 
+#### Run artillery for typescript API and generate report
+
+```bash
+npm run typescript
+```
+
 #### Run artillery for both, rust and java projects, and generate reports
 
 ```bash
-npm run java && npm run rust
+npm run java && npm run rust && npm run typescript
+```
+
+or 
+
+```bash
+npm run all
 ```

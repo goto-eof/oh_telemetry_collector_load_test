@@ -1,8 +1,8 @@
 config:
-  target: "http://localhost:8013"
+  target: "http://localhost:8019"
   phases:
     - duration: 300
-      arrivalRate: 73
+      arrivalRate: 50
  
 scenarios:
   - name: "Store data"
