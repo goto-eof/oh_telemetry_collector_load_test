@@ -1,7 +1,7 @@
 config:
   target: "http://localhost:8019"
   phases:
-    - duration: 120
+    - duration: 300
       arrivalRate: 10
       maxVusers: 50
  
