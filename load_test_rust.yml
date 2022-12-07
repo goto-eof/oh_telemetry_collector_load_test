@@ -1,11 +1,12 @@
 config:
   target: "http://localhost:8017"
   phases:
-    - duration: 300
-      arrivalRate: 73
+    - duration: 120
+      arrivalRate: 10
+      maxVusers: 50
  
 scenarios:
-  - name: "Store data"
+  - name: "Rust | Storing data"
     flow:
     - post:
         url: "/collect"
