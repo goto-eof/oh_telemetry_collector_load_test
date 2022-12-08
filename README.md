@@ -1,6 +1,6 @@
-### OH Telemetry Collector load test
+### OH Telemetry Collector loan test
 
-OH telemetry collector load test was developed for testing the applications workload. So that we can make a comparison between the POC in Java, Rust and TypeScript.
+OH telemetry collector loan test was developed for testing the applications workload. So that we can make a comparison between the POC in Java, Rust and TypeScript.
 
 The applications are the following:
 
