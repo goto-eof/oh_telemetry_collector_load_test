@@ -52,7 +52,7 @@ or
 npm run all
 ```
 
-or `npm run kall` for loan the test with a constant number of virtual users.
+or `npm run kall` for loan test with a constant number of virtual users.
 
 
 ### Moreover
