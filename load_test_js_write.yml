@@ -19,10 +19,8 @@ config:
       name: Sustained load
  
 scenarios:
-  - name: "JS | Retrieving, storing data and retrieving"
+  - name: "JS | Storing data"
     flow:
-    - get:
-        url: "/num-comp-ram"
     - post:
         url: "/collect"
         capture:
@@ -71,6 +69,3 @@ scenarios:
             os_manufacturer: Apple
             dbms_driver_name: MySQL Connector/J
             dbms_driver_version: mysql-connector-java
-    - get:
-        name: "JS | get /num-comp-ram"
-        url: "/num-comp-ram"

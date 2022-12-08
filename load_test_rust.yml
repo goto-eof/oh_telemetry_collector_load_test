@@ -10,11 +10,11 @@ config:
       arrivalRate: 5
       rampTo: 50
       name: Ramp up load
-    - duration: 300
+    - duration: 120
       arrivalRate: 50
       maxVusers: 50  
       name: Constant loan      
-    - duration: 600
+    - duration: 120
       arrivalRate: 50
       name: Sustained load
  

@@ -5,9 +5,22 @@
   "main": "index.js",
   "scripts": {
     "all":"npm run rust && npm run java && npm run js",
-    "rust": "artillery run  --output reports/report_rust.json  load_test_rust.yml && artillery report --output reports/report_rust.html reports/report_rust.json",
-    "java": "artillery run  --output reports/report_java.json  load_test_java.yml && artillery report --output reports/report_java.html reports/report_java.json",
-    "js": "artillery run  --output reports/report_js.json  load_test_js.yml && artillery report --output reports/report_js.html reports/report_js.json"
+
+    "rust": "npm run rust:write && npm run rust:read && npm run rust:read:write",
+    "java": "npm run java:write && npm run java:read && npm run java:read:write",
+    "js":   "npm run js:write && npm run js:read && npm run js:read:write",
+
+    "rust:read:write": "artillery run  --output reports-json/report_rust.json  load_test_rust.yml && artillery report --output reports-html/report_rust.html reports-json/report_rust.json",
+    "rust:write": "artillery run  --output reports-json/report_rust_write.json  load_test_rust_write.yml && artillery report --output reports-html/report_rust_write.html reports-json/report_rust_write.json",
+    "rust:read": "artillery run  --output reports-json/report_rust_read.json  load_test_rust_read.yml && artillery report --output reports-html/report_rust_read.html reports-json/report_rust_read.json",
+    
+    "java:read:write": "artillery run  --output reports-json/report_java.json  load_test_java.yml && artillery report --output reports-html/report_java.html reports-json/report_java.json",
+    "java:write": "artillery run  --output reports-json/report_java_write.json  load_test_java_write.yml && artillery report --output reports-html/report_java_write.html reports-json/report_java_write.json",
+    "java:read": "artillery run  --output reports-json/report_java_read.json  load_test_java_read.yml && artillery report --output reports-html/report_java_read.html reports-json/report_java_read.json",
+    
+    "js:read:write": "artillery run  --output reports-json/report_js.json  load_test_js.yml && artillery report --output reports-html/report_js.html reports-json/report_js.json",
+    "js:write": "artillery run  --output reports-json/report_js_write.json  load_test_js_write.yml && artillery report --output reports-html/report_js_write.html reports-json/report_js_write.json",
+    "js:read": "artillery run  --output reports-json/report_js_read.json  load_test_js_read.yml && artillery report --output reports-html/report_js_read.html reports-json/report_js_read.json"
   },
   "author": "Andrei Dodu",
   "license": "ISC",
