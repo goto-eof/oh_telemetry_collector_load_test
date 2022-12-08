@@ -63,8 +63,11 @@ npm run kall
 ### Moreover
 
 - Java server responds on: `http://127.0.0.1:8013`
+    - DB: `localhost:5433/postgres`
 - Rust server responds on: `http://127.0.0.1:8017`
+    - DB: `localhost:5437/postgres`
 - JS server responds on: `http://127.0.0.1:8019`
+    - DB: `localhost:5439/postgres`
 
 
 P.S. If you have a mac and the java loan test does not work, it could be that the Dockers VM has not enought space for the application container, so that change settings of VM. 
