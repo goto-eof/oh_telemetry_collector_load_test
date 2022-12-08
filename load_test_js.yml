@@ -29,7 +29,7 @@ scenarios:
               - "{{ status }}"       
         json:
           FUN_HW:
-            hw_mem_total_memory: '{{$randomNumber(1,4)}} GiB'
+            hw_mem_total_memory: '{{$randomNumber(1,1)}} GiB'
             hw_cpu_number_physical_processes: '8'
             hw_cpu_microarchitecture: ARM64
             hw_cpu_vendor: Apple Inc.
