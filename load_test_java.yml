@@ -8,9 +8,13 @@ config:
       maxVusers: 100
  
 scenarios:
-  - name: "Java | Storing data"
+  - name: "Java | Retrieving and Storing data"
     flow:
+    - get:
+        name: "Java | get /num-comp-ram"
+        url: "/num-comp-ram"
     - post:
+        name: "Java | post /collect"
         url: "/collect"
         capture:
             - json: "$.status"
@@ -26,12 +30,12 @@ scenarios:
               - "{{ status }}"       
         json:
           FUN_HW:
-            hw_mem_total_memory: 1 GiB
+            hw_mem_total_memory: '{{$randomNumber(1,4)}} GiB'
             hw_cpu_number_physical_processes: '8'
             hw_cpu_microarchitecture: ARM64
             hw_cpu_vendor: Apple Inc.
             hw_cpu_context_switches: '0'
-            hw_cpu_idientifier: 'Apple Inc.001___:'
+            hw_cpu_idientifier: '{{ $randomString() }}'
             hw_cpu_model: '0'
             hw_cpu_number_logical_processes: '8'
             hw_cpu_name: Apple M1 Pro
@@ -58,4 +62,6 @@ scenarios:
             os_manufacturer: Apple
             dbms_driver_name: MySQL Connector/J
             dbms_driver_version: mysql-connector-java
-
+    - get:
+        name: "Java | get /num-comp-ram"
+        url: "/num-comp-ram"
