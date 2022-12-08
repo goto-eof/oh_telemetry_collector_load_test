@@ -4,9 +4,9 @@ OH telemetry collector loan test was developed for testing the applications work
 
 The applications are the following:
 
-- [oh_telemetry_collector_server_rust](https://github.com/goto-eof/oh_telemetry_collector_server_rust)
-- [oh_telemetry_collector_server_java](https://github.com/goto-eof/oh_telemetry_collector_server_java)
-- [oh_telemetry_collector_server_ts](https://github.com/goto-eof/oh_telemetry_collector_server_ts)
+- [oh_telemetry_collector_server_rust](https://github.com/goto-eof/oh_telemetry_collector_server_rust) (Rust, Warp, sea-orm, Postgres)
+- [oh_telemetry_collector_server_java](https://github.com/goto-eof/oh_telemetry_collector_server_java) (Java, Spring Boot, Hibernate, Postgres)
+- [oh_telemetry_collector_server_ts](https://github.com/goto-eof/oh_telemetry_collector_server_ts) (Typescript, Express, TypeORM, Postgres)
 
 (Remember first to run all three docker containers: docker-compose up)
 
