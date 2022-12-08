@@ -51,7 +51,7 @@ or
 npm run all
 ```
 
-### Moreover
+### Moreover
 
 Java server responds on: `http://127.0.0.1:8013`
 Rust server responds on: `http://127.0.0.1:8017`
