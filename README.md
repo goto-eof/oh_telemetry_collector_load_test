@@ -17,10 +17,6 @@ The applications are the following:
     - JS server responds on: `http://127.0.0.1:8019`
     - DB: `localhost:5439/postgres`    
 
-
-
-
-
 Remember first to run all three docker containers: docker-compose up and remember to truncate table before test rerun.
 
 The test result is under the reports directory. 
@@ -73,4 +69,4 @@ npm run kall
 
 ### Moreover
 
-P.S. If you have a mac and the java loan test does not work, it could be that the Dockers VM has not enought space for the application container, so that change settings of VM. 
+If you have a mac and the java loan test does not work, it could be that the Dockers VM has not enought space for the application container, so that change settings of VM. 
