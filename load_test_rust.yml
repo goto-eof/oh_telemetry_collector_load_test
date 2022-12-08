@@ -1,18 +1,28 @@
 config:
   target: "http://127.0.0.1:8017"
   plugins:
-      # expect: {}  
+    # expect: {}  
   phases:
+    - duration: 60
+      arrivalRate: 5
+      name: Warm up
+    - duration: 120
+      arrivalRate: 5
+      rampTo: 50
+      name: Ramp up load
     - duration: 300
-      arrivalRate: 10
-      maxVusers: 100
+      arrivalRate: 50
+      maxVusers: 50  
+      name: Constant loan      
+    - duration: 600
+      arrivalRate: 50
+      name: Sustained load
  
-scenarios:
-  - name: "Rust | Storing data"
+scenarios:         
+  - name: "Rust | Retrieving, storing data and retrieving"
     flow:
     - get:
-        name: "Rust | get /num-comp-ram"
-        url: "/num-comp-ram"    
+        url: "/num-comp-ram"
     - post:
         url: "/collect"
         capture:
@@ -26,10 +36,10 @@ scenarios:
           - hasProperty: status
           - equals:
               - "true"
-              - "{{ status }}"     
+              - "{{ status }}"       
         json:
           FUN_HW:
-            hw_mem_total_memory:  '{{$randomNumber(1,1)}} GiB'
+            hw_mem_total_memory: '{{$randomNumber(1,1)}} GiB'
             hw_cpu_number_physical_processes: '8'
             hw_cpu_microarchitecture: ARM64
             hw_cpu_vendor: Apple Inc.
@@ -60,7 +70,7 @@ scenarios:
             os_family: macOS
             os_manufacturer: Apple
             dbms_driver_name: MySQL Connector/J
-            dbms_driver_version: mysql-connector-java
+            dbms_driver_version: mysql-connector-Rust
     - get:
         name: "Rust | get /num-comp-ram"
         url: "/num-comp-ram"

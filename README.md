@@ -51,5 +51,11 @@ or
 npm run all
 ```
 
+### Moreover
+
+Java server responds on: `http://127.0.0.1:8013`
+Rust server responds on: `http://127.0.0.1:8017`
+JS server responds on: `http://127.0.0.1:8019`
+
 
 P.S. If you have a mac and the java load test does not work, it could be that the Dockers VM has not enought space for the application container, so that change settings of VM. 

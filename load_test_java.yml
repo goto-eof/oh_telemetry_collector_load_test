@@ -3,18 +3,27 @@ config:
   plugins:
     # expect: {}  
   phases:
+    - duration: 60
+      arrivalRate: 5
+      name: Warm up
+    - duration: 120
+      arrivalRate: 5
+      rampTo: 50
+      name: Ramp up load
     - duration: 300
-      arrivalRate: 10
-      maxVusers: 100
+      arrivalRate: 50
+      maxVusers: 50  
+      name: Constant loan
+    - duration: 600
+      arrivalRate: 50
+      name: Sustained load
  
 scenarios:
-  - name: "Java | Retrieving and Storing data"
+  - name: "Java | Retrieving, storing data and retrieving"
     flow:
     - get:
-        name: "Java | get /num-comp-ram"
         url: "/num-comp-ram"
     - post:
-        name: "Java | post /collect"
         url: "/collect"
         capture:
             - json: "$.status"
