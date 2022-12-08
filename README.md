@@ -52,4 +52,4 @@ npm run all
 ```
 
 
-P.S. If you have a mac and the java load test does not work, it could be that the Dockers VM has not enought space for the application container, so that change settings of VM. 
+P.S. If you have a mac and the java loan test does not work, it could be that the Dockers VM has not enought space for the application container, so that change settings of VM. 
