@@ -9,6 +9,7 @@ The applications are the following:
 - [oh_telemetry_collector_server_ts](https://github.com/goto-eof/oh_telemetry_collector_server_ts) (Typescript, Express, TypeORM, Postgres)
 
 (Remember first to run all three docker containers: docker-compose up)
+(Remember to truncate table before every test)
 
 The test result is under the reports directory. 
 
@@ -50,6 +51,9 @@ or
 ```bash
 npm run all
 ```
+
+or `npm run kall` for loan the test with a constant number of virtual users.
+
 
 ### Moreover
 

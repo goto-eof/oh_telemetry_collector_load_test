@@ -1,0 +1,67 @@
+config:
+  target: "http://127.0.0.1:8019"
+  plugins:
+    # expect: {}  
+  phases:
+    - duration: 60
+      arrivalRate: 5
+      name: Warm up
+    - duration: 120
+      arrivalRate: 5
+      rampTo: 50
+      name: Ramp up load
+    - duration: 120
+      arrivalRate: 50
+      name: Sustained load
+ 
+scenarios:
+  - name: "JS | Storing data"
+    flow:
+    - post:
+        url: "/collect"
+        capture:
+            - json: "$.status"
+              as: status
+        expect:
+          - statusCode: 
+            - 200
+            - 201
+          - contentType: json
+          - hasProperty: status
+          - equals:
+              - "true"
+              - "{{ status }}"       
+        json:
+          FUN_HW:
+            hw_mem_total_memory: '{{$randomNumber(1,1)}} GiB'
+            hw_cpu_number_physical_processes: '8'
+            hw_cpu_microarchitecture: ARM64
+            hw_cpu_vendor: Apple Inc.
+            hw_cpu_context_switches: '0'
+            hw_cpu_idientifier: '{{ $randomString() }}'
+            hw_cpu_model: '0'
+            hw_cpu_number_logical_processes: '8'
+            hw_cpu_name: Apple M1 Pro
+          FUN_OH:
+            oh_active_users: '2'
+            loc_timezone: Europe/Rome
+            app_version: 1.11.4
+            loc_zip_code: ''
+            time_last_used: '2022-12-05T01:50:23.346896'
+            oh_active_wards: '4'
+            oh_active_beds: '80'
+            loc_region_name: Lombardy
+            oh_active_patients: '0'
+            loc_country_name: Italy
+            loc_country_code: IT
+            currency_code: EUR
+            loc_city: Madagascar
+          FUN_SW:
+            os_bitness: '64'
+            os_version: '99.0'
+            dbms_product_name: MySQL
+            dbms_product_version: Maria
+            os_family: macOS
+            os_manufacturer: Apple
+            dbms_driver_name: MySQL Connector/J
+            dbms_driver_version: mysql-connector-java
