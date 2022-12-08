@@ -17,7 +17,7 @@ The applications are the following:
     - 🚎 JS server responds on: `http://127.0.0.1:8019`
     - 🗄️ DB: `localhost:5439/postgres`    
 
-Remember first to run all three docker containers: docker-compose up and remember to truncate table before test rerun.
+Remember first to run all three docker containers: docker-compose up and remember to truncate the `telemetry` table before test rerun.
 
 The test result is under the reports directory. 
 
