@@ -19,7 +19,7 @@ The applications are the following:
 
 Remember first to run all three docker containers: docker-compose up and remember to truncate the `telemetry` table before test rerun.
 
-The test result is under the reports directory. 
+The test result is under the `reports-html` directory. 
 
 A meangfull value is the P95 percentile. It means that 95% of all our request had a response time equal or less than the value in the report. So that less is better.
 
