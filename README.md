@@ -5,11 +5,21 @@ OH telemetry collector loan test was developed for testing the applications work
 The applications are the following:
 
 - [oh_telemetry_collector_server_rust](https://github.com/goto-eof/oh_telemetry_collector_server_rust) 
-    - (Rust, Warp, Sea-ORM, Postgres)
+    - Technologies: Rust, Warp, Sea-ORM, Postgres
+    - Rust server responds on: `http://127.0.0.1:8017`
+    - DB: `localhost:5437/postgres`
 - [oh_telemetry_collector_server_java](https://github.com/goto-eof/oh_telemetry_collector_server_java) 
-    - (Java, Spring Boot, Hibernate, Postgres)
+    - Technologies: Java, Spring Boot, Hibernate, Postgres
+    - Java server responds on: `http://127.0.0.1:8013`
+    - DB: `localhost:5433/postgres`    
 - [oh_telemetry_collector_server_ts](https://github.com/goto-eof/oh_telemetry_collector_server_ts) 
-    - (Typescript, Express, TypeORM, Postgres)
+    - Technologies: Typescript, Express, TypeORM, Postgres
+    - JS server responds on: `http://127.0.0.1:8019`
+    - DB: `localhost:5439/postgres`    
+
+
+
+
 
 Remember first to run all three docker containers: docker-compose up and remember to truncate table before test rerun.
 
@@ -62,13 +72,5 @@ npm run kall
 
 
 ### Moreover
-
-- Java server responds on: `http://127.0.0.1:8013`
-    - DB: `localhost:5433/postgres`
-- Rust server responds on: `http://127.0.0.1:8017`
-    - DB: `localhost:5437/postgres`
-- JS server responds on: `http://127.0.0.1:8019`
-    - DB: `localhost:5439/postgres`
-
 
 P.S. If you have a mac and the java loan test does not work, it could be that the Dockers VM has not enought space for the application container, so that change settings of VM. 
