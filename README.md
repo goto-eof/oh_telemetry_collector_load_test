@@ -5,7 +5,7 @@ OH telemetry collector loan test was developed for testing the applications work
 The applications are the following:
 
 - [oh_telemetry_collector_server_rust](https://github.com/goto-eof/oh_telemetry_collector_server_rust) 
-    - <span style="color:royalblue;">Technologies:</span> Rust, Warp, Sea-ORM, Postgres
+    - <span style="color:blue;">Technologies:</span> Rust, Warp, Sea-ORM, Postgres
     - Rust server responds on: `http://127.0.0.1:8017`
     - DB: `localhost:5437/postgres`
 - [oh_telemetry_collector_server_java](https://github.com/goto-eof/oh_telemetry_collector_server_java) 
