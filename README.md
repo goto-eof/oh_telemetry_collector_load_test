@@ -73,4 +73,4 @@ If you have a mac and the java loan test does not work, it could be that the Doc
 
 Reports were generated on a Linux machine.
 
-Feel free to [contact me](https://andre-i.dev/#contactme).
+if any problems arise, feel free to [contact me](https://andre-i.dev/#contactme).
