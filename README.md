@@ -72,3 +72,5 @@ npm run kall
 If you have a mac and the java loan test does not work, it could be that the Dockers VM has not enought space for the application container, so that change settings of VM. 
 
 Reports were generated on a Linux machine.
+
+if any problems arise, feel free to [contact me](https://andre-i.dev/#contactme).
