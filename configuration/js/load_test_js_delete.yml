@@ -1,0 +1,17 @@
+config:
+  target: "http://127.0.0.1:8019"
+  http:
+    timeout: 120
+  plugins:
+    # expect: {}  
+  phases:
+    - duration: 1
+      arrivalRate: 1
+      rampTo: 1
+      name: Delete
+
+scenarios:
+  - name: "JS | deleting records"
+    flow:
+    - delete:
+        url: "/delete-all"     

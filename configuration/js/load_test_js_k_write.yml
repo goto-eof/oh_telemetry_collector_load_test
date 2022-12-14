@@ -1,5 +1,7 @@
 config:
   target: "http://127.0.0.1:8019"
+  http:
+    timeout: 10
   plugins:
     # expect: {}  
   phases:
@@ -14,7 +16,7 @@ before:
     - delete:
         url: "/delete-all" 
 scenarios:
-  - name: "JS | Storing data"
+  - name: "JS | K - Storing data"
     flow:
     - post:
         url: "/collect"

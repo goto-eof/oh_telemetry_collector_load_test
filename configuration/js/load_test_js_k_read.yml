@@ -9,7 +9,7 @@ config:
       name: Constant loan      
   
 scenarios:
-  - name: "JS | Retrieving data"
+  - name: "JS | K - Retrieving data"
     flow:
     - get:
         url: "/num-comp-ram"

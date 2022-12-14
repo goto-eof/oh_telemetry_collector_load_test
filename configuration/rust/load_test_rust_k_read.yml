@@ -9,7 +9,7 @@ config:
       name: Constant loan      
  
 scenarios:         
-  - name: "Rust | Retrieving, storing data and retrieving"
+  - name: "Rust | K - Retrieving, storing data and retrieving"
     flow:
     - get:
         url: "/num-comp-ram"

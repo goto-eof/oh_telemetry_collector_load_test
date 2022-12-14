@@ -1,5 +1,7 @@
 config:
   target: "http://127.0.0.1:8013"
+  http:
+    timeout: 10
   plugins:
     # expect: {}  
   phases:
@@ -8,13 +10,8 @@ config:
       maxVusers: 50  
       name: Constant loan
 
-before:
-  flow:
-    - log: "running a request before virtual users run"
-    - delete:
-        url: "/delete-all"  
 scenarios:
-  - name: "Java | Storing data"
+  - name: "Java | K - Storing data"
     flow:
     - post:
         url: "/collect"

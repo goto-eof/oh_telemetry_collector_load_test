@@ -1,5 +1,7 @@
 config:
   target: "http://127.0.0.1:8013"
+  http:
+    timeout: 10
   plugins:
     # expect: {}  
   phases:
@@ -14,11 +16,6 @@ config:
       arrivalRate: 50
       name: Sustained load
 
-before:
-  flow:
-    - log: "running a request before virtual users run"
-    - delete:
-        url: "/delete-all"  
 scenarios:
   - name: "Java | Storing data"
     flow:
