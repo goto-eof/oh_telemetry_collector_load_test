@@ -1,15 +1,26 @@
 config:
-  target: "http://127.0.0.1:8017"
+  target: "http://127.0.0.1:8013"
   plugins:
     # expect: {}  
   phases:
+    - duration: 60
+      arrivalRate: 5
+      name: Warm up
+    - duration: 120
+      arrivalRate: 5
+      rampTo: 50
+      name: Ramp up load
     - duration: 120
       arrivalRate: 50
-      maxVusers: 50  
-      name: Constant loan      
- 
-scenarios:         
-  - name: "Rust | Storing data"
+      name: Sustained load
+
+before:
+  flow:
+    - log: "running a request before virtual users run"
+    - delete:
+        url: "/delete-all"  
+scenarios:
+  - name: "Java | Storing data"
     flow:
     - post:
         url: "/collect"
@@ -58,4 +69,4 @@ scenarios:
             os_family: macOS
             os_manufacturer: Apple
             dbms_driver_name: MySQL Connector/J
-            dbms_driver_version: mysql-connector-Rust
+            dbms_driver_version: mysql-connector-java

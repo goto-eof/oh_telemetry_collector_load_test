@@ -4,36 +4,29 @@
   "description": "loan test for OH Telemetry Collector Server",
   "main": "index.js",
   "scripts": {
-    "all":"npm run rust && npm run java && npm run js",
-    "kall":"npm run krust && npm run kjava && npm run kjs",
-
+    "all": "npm run rust && npm run java && npm run js",
+    "kall": "npm run krust && npm run kjava && npm run kjs",
     "rust": "npm run rust:write && npm run rust:read && npm run rust:read:write",
     "java": "npm run java:write && npm run java:read && npm run java:read:write",
-    "js":   "npm run js:write && npm run js:read && npm run js:read:write",
-
+    "js": "npm run js:write && npm run js:read && npm run js:read:write",
     "krust": "npm run rust:kwrite && npm run rust:kread",
     "kjava": "npm run java:kwrite && npm run java:kread",
-    "kjs":   "npm run js:kwrite && npm run js:kread",
-
-    "rust:read:write": "artillery run  --output reports-json/report_rust.json  configuration/load_test_rust.yml && artillery report --output reports-html/report_rust.html reports-json/report_rust.json",
-    "rust:write": "artillery run  --output reports-json/report_rust_write.json  configuration/load_test_rust_write.yml && artillery report --output reports-html/report_rust_write.html reports-json/report_rust_write.json",
-    "rust:read": "artillery run  --output reports-json/report_rust_read.json  configuration/load_test_rust_read.yml && artillery report --output reports-html/report_rust_read.html reports-json/report_rust_read.json",
-    "rust:kwrite": "artillery run  --output reports-json/report_rust_k_write.json  configuration/load_test_rust_k_write.yml && artillery report --output reports-html/report_rust_k_write.html reports-json/report_rust_k_write.json",
-    "rust:kread": "artillery run  --output reports-json/report_rust_k_read.json  configuration/load_test_rust_k_read.yml && artillery report --output reports-html/report_rust_k_read.html reports-json/report_rust_k_read.json",
-
-    "java:read:write": "artillery run  --output reports-json/report_java.json  configuration/load_test_java.yml && artillery report --output reports-html/report_java.html reports-json/report_java.json",
-    "java:write": "artillery run  --output reports-json/report_java_write.json  configuration/load_test_java_write.yml && artillery report --output reports-html/report_java_write.html reports-json/report_java_write.json",
-    "java:read": "artillery run  --output reports-json/report_java_read.json  configuration/load_test_java_read.yml && artillery report --output reports-html/report_java_read.html reports-json/report_java_read.json",
-    "java:kwrite": "artillery run  --output reports-json/report_java_k_write.json  configuration/load_test_java_k_write.yml && artillery report --output reports-html/report_java_k_write.html reports-json/report_java_k_write.json",
-    "java:kread": "artillery run  --output reports-json/report_java_k_read.json  configuration/load_test_java_k_read.yml && artillery report --output reports-html/report_java_k_read.html reports-json/report_java_k_read.json",
-    
-
-    "js:read:write": "artillery run  --output reports-json/report_js.json  configuration/load_test_js.yml && artillery report --output reports-html/report_js.html reports-json/report_js.json",
-    "js:write": "artillery run  --output reports-json/report_js_write.json  configuration/load_test_js_write.yml && artillery report --output reports-html/report_js_write.html reports-json/report_js_write.json",
-    "js:read": "artillery run  --output reports-json/report_js_read.json  configuration/load_test_js_read.yml && artillery report --output reports-html/report_js_read.html reports-json/report_js_read.json",
-    "js:kwrite": "artillery run  --output reports-json/report_js_k_write.json  configuration/load_test_js_k_write.yml && artillery report --output reports-html/report_js_k_write.html reports-json/report_js_k_write.json",
-    "js:kread": "artillery run  --output reports-json/report_js_k_read.json  configuration/load_test_js_k_read.yml && artillery report --output reports-html/report_js_k_read.html reports-json/report_js_k_read.json"
-  
+    "kjs": "npm run js:kwrite && npm run js:kread",
+    "rust:read:write": "artillery run  --output reports-json/report_rust.json  configuration/rust/load_test_rust.yml && artillery report --output reports-html/report_rust.html reports-json/report_rust.json",
+    "rust:write": "artillery run  --output reports-json/report_rust_write.json  configuration/rust/load_test_rust_write.yml && artillery report --output reports-html/report_rust_write.html reports-json/report_rust_write.json",
+    "rust:read": "artillery run  --output reports-json/report_rust_read.json  configuration/rust/load_test_rust_read.yml && artillery report --output reports-html/report_rust_read.html reports-json/report_rust_read.json",
+    "rust:kwrite": "artillery run  --output reports-json/report_rust_k_write.json  configuration/rust/load_test_rust_k_write.yml && artillery report --output reports-html/report_rust_k_write.html reports-json/report_rust_k_write.json",
+    "rust:kread": "artillery run  --output reports-json/report_rust_k_read.json  configuration/rust/load_test_rust_k_read.yml && artillery report --output reports-html/report_rust_k_read.html reports-json/report_rust_k_read.json",
+    "java:read:write": "artillery run  --output reports-json/report_java.json  configuration/java/load_test_java.yml && artillery report --output reports-html/report_java.html reports-json/report_java.json",
+    "java:write": "artillery run  --output reports-json/report_java_write.json  configuration/java/load_test_java_write.yml && artillery report --output reports-html/report_java_write.html reports-json/report_java_write.json",
+    "java:read": "artillery run  --output reports-json/report_java_read.json  configuration/java/load_test_java_read.yml && artillery report --output reports-html/report_java_read.html reports-json/report_java_read.json",
+    "java:kwrite": "artillery run  --output reports-json/report_java_k_write.json  configuration/java/load_test_java_k_write.yml && artillery report --output reports-html/report_java_k_write.html reports-json/report_java_k_write.json",
+    "java:kread": "artillery run  --output reports-json/report_java_k_read.json  configuration/java/load_test_java_k_read.yml && artillery report --output reports-html/report_java_k_read.html reports-json/report_java_k_read.json",
+    "js:read:write": "artillery run  --output reports-json/report_js.json  configuration/js/load_test_js.yml && artillery report --output reports-html/report_js.html reports-json/report_js.json",
+    "js:write": "artillery run  --output reports-json/report_js_write.json  configuration/js/load_test_js_write.yml && artillery report --output reports-html/report_js_write.html reports-json/report_js_write.json",
+    "js:read": "artillery run  --output reports-json/report_js_read.json  configuration/js/load_test_js_read.yml && artillery report --output reports-html/report_js_read.html reports-json/report_js_read.json",
+    "js:kwrite": "artillery run  --output reports-json/report_js_k_write.json  configuration/js/load_test_js_k_write.yml && artillery report --output reports-html/report_js_k_write.html reports-json/report_js_k_write.json",
+    "js:kread": "artillery run  --output reports-json/report_js_k_read.json  configuration/js/load_test_js_k_read.yml && artillery report --output reports-html/report_js_k_read.html reports-json/report_js_k_read.json"
   },
   "author": "Andrei Dodu",
   "license": "ISC",

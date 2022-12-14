@@ -13,7 +13,12 @@ config:
     - duration: 120
       arrivalRate: 50
       name: Sustained load
- 
+
+before:
+  flow:
+    - log: "running a request before virtual users run"
+    - delete:
+        url: "/delete-all" 
 scenarios:
   - name: "JS | Storing data"
     flow:
